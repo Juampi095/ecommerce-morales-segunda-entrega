@@ -1,0 +1,134 @@
+.App {
+  text-align: left;
+ 
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: left;
+  color: #2841ad;
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.container{
+  background-color: #307cd4;
+  color: white;
+  font-family: 'Urbanist', sans-serif;
+}
+.navbar-brand{
+  color: white !important;
+}
+.nav-link{
+  color: white !important;
+}
+.dropdown-item{
+  color: #283fa5 !important;
+}
+.App{
+  text-align: center;
+  color: #307cd4;
+}
+
+.Saludo{
+  color: #307cd4;
+  margin: 10px;
+  text-align: center;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 30px;
+}
+/* ItemCount */
+.counter {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 20px;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.counter h5 {
+  color: #307cd4;
+  font-size: 15px;
+  font-family: 'Urbanist', sans-serif;
+  border:1px, solid, #307cd4;
+  border-style: inset;
+  
+}
+
+.counter__output {
+  font-size: 25px;
+  color: #307cd4;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.btn__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  column-gap: 20px;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.control__btn {
+  font-size: 10px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: rgb(16, 0, 54);
+  border: 1px solid rgb(16, 0, 54);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.control__btn:hover {
+  background-color: #307cd4;;
+  color: rgb(255, 255, 255);
+  border: 1px solid #307cd4;
+}
+
+.reset {
+  width: 80px;
+  font-size: 15px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: rgb(16, 0, 54);
+  border: 1px solid rgb(16, 0, 54)4;;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.reset:hover {
+  background-color: #307cd4;;
+  color: rgb(255, 255, 255);
+  border: 1px solid #307cd4;;
+}
