@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { products } from './productos';
 
+// const [items, setItems] = useState([]);
 const ItemListContainer = () => {
 
 
     useEffect(() => {
         const traerProductos = () => {
-            return new promise((res, rej) => {
+            return new Promise((res, rej) => {
                 setTimeout(() => {
                     res(products);
                 }, 2000);
@@ -25,20 +26,15 @@ const ItemListContainer = () => {
 
 
     return (
+        <main>
         <div className="item-list-container">
             <ItemList />
 
         </div>
+        </main>
     );
-
+    
 
 };
 
-
-
-// function ItemListContainer({ greeting }) {
-//     return (
-//         <h3>{greeting}</h3>
-//     )
-// }
 export default ItemListContainer;

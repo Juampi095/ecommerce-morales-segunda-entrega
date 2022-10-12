@@ -3,21 +3,27 @@ import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemCount from './components/ItemCount';
-import "./App.css"
+import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
-    <>
-
+    <BrowserRouter>
       <NavBar />
+      <Routes>
 
-      <main>
-        <div className="Saludo">
-          <ItemListContainer greeting="¡Bienvenidos a CarArt!" />
-        </div>
-        <ItemCount stockTotal={25} stockInicial={1} />
-      </main>
-    </>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/category" element={<ItemListContainer />} />
+        <Route path="/item" element={<ItemDetailContainer />} />
+        <Route path="/cart" element={<Cart />} />
+
+        {/* <Route path="*" element={PageNotFound} /> */}
+
+
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
