@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { products } from './productos';
+import { useParams } from "react-router-dom";
 
-// const [items, setItems] = useState([]);
 const ItemListContainer = () => {
+    const [items, setItems] = useState([]);
 
+    const { categoryName } = useParams();
 
     useEffect(() => {
         const traerProductos = () => {
             return new Promise((res, rej) => {
+                const prodFiltrados = products.filter(
+                    (prod) => prod.category === categoryName
+                );
+                const prod = categoryName ? prodFiltrados : products;
                 setTimeout(() => {
-                    res(products);
-                }, 2000);
+                    res(prod);
+                }, 500);
             });
         };
         traerProductos()
@@ -21,20 +27,13 @@ const ItemListContainer = () => {
             .catch((error) => {
                 console.log(error);
             });
-    }, []);
-
-
+    }, [categoryName]);
 
     return (
-        <main>
-        <div className="item-list-container">
-            <ItemList />
-
+        <div className='container-fluid'>
+            <ItemList items={items} />
         </div>
-        </main>
     );
-    
-
 };
 
 export default ItemListContainer;

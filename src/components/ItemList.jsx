@@ -1,19 +1,17 @@
 import React from "react";
 import Item from './Item';
+import { Container } from "react-bootstrap";
 
-const ItemList = (props) => {
-    console.log(props.items);
-    //mapeo de los productos
+const ItemList = ({ items }) => {
     return (
-        <div className="item-list">
-            {props.items.map((prod)=>{
-                return <Item prod={prod}/>
-            })
-        }
-            <Item />
-            
-            
+      <Container fluid='true'>
+        <div className='row item-list'>
+          {items.map((prod) => {
+            return <Item prod={prod} key={prod.id} />;
+          })}
         </div>
+      </Container>
     );
-};
-export default ItemList;
+  };
+  
+  export default ItemList;

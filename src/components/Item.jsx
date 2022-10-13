@@ -1,20 +1,19 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+ import React from 'react';
+ import { Link } from 'react-router-dom';
 
-function CardProduct() {
-  return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-  );
+ const Item = ({ prod }) => {
+
+   return (
+     <article className='card'>
+       <img className="Imagenes" src={prod.imagen} />
+       <div className='card-info'>
+         <h6>{prod.modelo}</h6>
+         <h4>${prod.precio}</h4>
+               {/* <h5>{prod.category}</h5> */}
+         <Link to={`/item/${prod.id}`}><button className="Boton">Comprar</button></Link>
+      </div>
+     </article>
+
+  )
 }
-
-export default CardProduct; 
+ export default Item;

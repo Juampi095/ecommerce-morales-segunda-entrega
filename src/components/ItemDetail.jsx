@@ -1,7 +1,9 @@
+import { Container } from "bootstrap-4-react/lib/components/layout";
 import ItemCount from "./ItemCount";
 
 const ItemDetail=({item})=>{
     return(
+        <Container>
         <div className="container-detail">
             <img src={item.imagen}></img>
             <div>
@@ -13,7 +15,8 @@ const ItemDetail=({item})=>{
 
             </div>
     </div>
+    </Container>
     );
 
 };
-export default ItemDetail(); 
+export default ItemDetail; 

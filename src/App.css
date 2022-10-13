@@ -130,5 +130,24 @@
 .reset:hover {
   background-color: #307cd4;;
   color: rgb(255, 255, 255);
-  border: 1px solid #307cd4;;
+  border: 1px solid #307cd4;
+}
+.card-info{
+  font-family: 'Urbanist', sans-serif;
+  color: #307cd4;
+  size: 10px;
+  
+}
+.Imagenes{
+  max-width: 250px;
+  position: relative;
+}
+.card{
+  margin: 15px;
+  max-height: 450px;
+  width: 50px;
+  
+}
+.Boton{
+font-family:'Urbanist', sans-serif;
 }
