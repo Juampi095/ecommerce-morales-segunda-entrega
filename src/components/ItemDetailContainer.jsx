@@ -3,7 +3,7 @@ import ItemDetail from "./ItemDetail";
 import { products } from "./productos";
 
 const ItemDetailContainer = () => {
-    const [item,setItem]=useState({});
+    const [item,setItem]=useState();
 
     useEffect(()=>{
         const traerProducto=()=>{
@@ -26,10 +26,14 @@ const ItemDetailContainer = () => {
     console.log(item);
 
     return(
-        <div className="item-list-container">
-            <ItemDetail item={item} />
+        <div className="item-list-container"> 
+        {item ? <h1>Cargando...</h1> : <ItemDetail item={item} />}
         </div>
     );
 };
 
 export default ItemDetailContainer();
+
+{/* <div className="item-list-container">
+<ItemDetail item={item} />
+</div> */}
